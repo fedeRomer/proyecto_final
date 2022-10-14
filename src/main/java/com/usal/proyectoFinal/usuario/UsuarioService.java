@@ -139,6 +139,8 @@ public class UsuarioService {
 
     public ResponseEntity<?> checkAccess(CheckAccess checkAccess) {
 
+        return new ResponseEntity<>("Ok", HttpStatus.OK);
+/** disabled for the moment
         if(Helper.isNullOrEmpty(checkAccess.typeOfUser)){
             responseCustom.setResponse("no autorizado");
             return new ResponseEntity<>(responseCustom, HttpStatus.UNAUTHORIZED);
@@ -150,6 +152,7 @@ public class UsuarioService {
             responseCustom.setResponse("no autorizado");
             return new ResponseEntity<>(responseCustom, HttpStatus.UNAUTHORIZED);
         }
+ */
     }
 
     public ResponseEntity<?> getUsuarioById(Usuario usuario) {

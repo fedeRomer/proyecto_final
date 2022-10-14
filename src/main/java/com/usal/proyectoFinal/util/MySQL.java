@@ -19,8 +19,8 @@ public class MySQL {
     public MySQL() throws IOException {
 
 		this.driver = "com.mysql.jdbc.Driver";
-		this.url = "jdbc:mysql://localhost/sgav";
-		this.username = "root";
+		this.url = "jdbc:mysql://localhost/proyecto_final";
+		this.username = "user";
 		this.password = "1234";
 
      /*   Properties p = new Properties();
