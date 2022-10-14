@@ -25,9 +25,6 @@ public class Usuario implements Serializable {
     @Column(name = "apellido")
     private String apellido;
 
-    @Column(name = "rol_id")
-    private Integer rolId;
-
     @Column(name = "sexo")
     private String sexo;
 

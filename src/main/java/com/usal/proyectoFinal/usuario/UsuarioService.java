@@ -58,10 +58,6 @@ public class UsuarioService {
                 return new ResponseEntity<>(responseCustom, HttpStatus.BAD_REQUEST);
             }
         }
-        if(usuario.getRolId() == null || usuario.getRolId() == 0){
-            responseCustom.setResponse("rol vacio, verificar");
-            return new ResponseEntity<>(responseCustom, HttpStatus.BAD_REQUEST);
-        }
         if(usuario.getSexo() == null || usuario.getSexo().isEmpty()){
             responseCustom.setResponse("sexo vacio, verificar");
             return new ResponseEntity<>(responseCustom, HttpStatus.BAD_REQUEST);

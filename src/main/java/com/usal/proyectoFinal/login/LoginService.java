@@ -130,7 +130,7 @@ public class LoginService  {
 
     public ResponseEntity<?> updateLogin(Login login) {
 
-        Login loginNew = new Login();
+        //Login loginNew = new Login();
         if(login.getId() == null || login.getId() ==0){
             return new ResponseEntity<>("Debe contener el id del usuario a actualizar",HttpStatus.BAD_REQUEST);
         }
@@ -139,17 +139,21 @@ public class LoginService  {
             return new ResponseEntity<>("Debe contener el email del usuario",HttpStatus.BAD_REQUEST);
         }
 
-        loginNew = loginRepository.findById(login.getId());
+        var loginNew = loginRepository.findById(login.getId());
+
+        if(loginNew == null && !loginNew.isPresent()){
+            return new ResponseEntity<>("Not Found",HttpStatus.NOT_FOUND);
+        }
 
         if(login.getPassword() != null && !login.getPassword().isEmpty()){
-            loginNew.setPassword(login.getPassword());
+            loginNew.get().setPassword(login.getPassword());
         }
-        loginNew.setUsername(login.getUsername());
+        loginNew.get().setUsername(login.getUsername());
 
         if(login.getUsuarioId() != null){
-            loginNew.setUsuarioId(login.getUsuarioId());
+            loginNew.get().setUsuarioId(login.getUsuarioId());
         }else{
-            loginNew.setUsuarioId(null);
+            loginNew.get().setUsuarioId(null);
         }
 
         loginRepository.save(login);
