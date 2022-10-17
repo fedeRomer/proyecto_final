@@ -47,6 +47,7 @@ public class LoginDaoImpl implements LoginDao {
             login.setId(set.getInt("id"));
             login.setUsername(set.getString("username"));
             login.setPassword(set.getString("password"));
+            login.setEmail(set.getString("email"));
             usuario.setId(set.getInt("usuario_id"));
 
             if(usuario.getId() == null || usuario.getId()==0){
