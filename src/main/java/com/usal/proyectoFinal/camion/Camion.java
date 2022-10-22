@@ -24,6 +24,9 @@ public class Camion implements Serializable {
     @Column
     private String estado;
 
+    @Column
+    private String patente;
+
     @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     @JoinColumn(name = "ubicacion_fk")
     private Ubicacion ubicacion;

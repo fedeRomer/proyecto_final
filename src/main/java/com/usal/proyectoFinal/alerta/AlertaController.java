@@ -38,7 +38,7 @@ public class AlertaController {
         return alertaService.updateAlerta(alerta);
     }
 
-    @PostMapping("/getallactivealerts")
+    @GetMapping("/getallactivealerts")
     public ResponseEntity<?> getAllActiveAlerts(){
         return alertaService.getAllActiveAlerts();
     }

@@ -6,7 +6,7 @@ import org.springframework.data.jpa.repository.Query;
 import java.util.List;
 
 public interface AlertaRepository extends JpaRepository<Alerta,Long> {
-    @Query(value = "SELECT * FROM alerta WHERE is_active=TRUE", nativeQuery = true)
+    @Query(value = "SELECT * FROM alerta", nativeQuery = true)
     List<Alerta> findAllActiveAlertas();
 
 }

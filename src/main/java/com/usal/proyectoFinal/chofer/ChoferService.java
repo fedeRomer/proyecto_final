@@ -20,7 +20,6 @@ public class ChoferService {
     }
 
     public ResponseEntity<?> update(Chofer chofer) {
-
         return new ResponseEntity<>(choferRepository.save(chofer), HttpStatus.OK);
     }
 

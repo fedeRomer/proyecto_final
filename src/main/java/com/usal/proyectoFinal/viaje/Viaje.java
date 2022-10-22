@@ -25,4 +25,13 @@ public class Viaje {
     @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     @JoinColumn(name = "chofer_fk")
     private Chofer chofer;
+
+    @Column(name ="origen")
+    private String origen;
+
+    @Column(name="destino")
+    private String destino;
+
+    @Column(name ="detalle")
+    private String detalle;
 }

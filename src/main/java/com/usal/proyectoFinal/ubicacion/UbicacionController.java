@@ -24,12 +24,12 @@ public class UbicacionController {
     }
 
     @PostMapping()
-    public ResponseEntity<?> add(@RequestBody Ubicacion ubicacion{
+    public ResponseEntity<?> add(@RequestBody Ubicacion ubicacion){
         return ubicacionService.add(ubicacion);
     }
 
     @PutMapping()
-    public ResponseEntity<?> get(@RequestBody Ubicacion ubicacion){
+    public ResponseEntity<?> update(@RequestBody Ubicacion ubicacion){
         return ubicacionService.update(ubicacion);
     }
 
