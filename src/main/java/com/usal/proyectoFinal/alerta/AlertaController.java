@@ -5,7 +5,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@CrossOrigin(origins = "http://localhost:3000, http://localhost:5000") //crossOrigin va para todos los controller
+@CrossOrigin(origins = "http://localhost:3000") //crossOrigin va para todos los controller
 @RequestMapping("/api/alerta")
 public class AlertaController {
 
